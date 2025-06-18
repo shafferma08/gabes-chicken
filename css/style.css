@@ -3,6 +3,7 @@
   --brown: #733e1b;
   --gold: #FFC857;
   --gray: #4A5859;
+  --black: #2E282A;
 }
 
 * {
@@ -70,11 +71,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
   }
   
   .hero-text {
-    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    background-color: rgba(0, 0, 0, .6); /* semi-transparent black */
     padding: 1rem 2rem;
     border-radius: 10px;
     color: #fff;
@@ -85,7 +85,7 @@
 
   /* About section */
   .about-section {
-    background-color: var(--gray);
+    background-color: var(--black);
     padding: 4rem 2rem;
     display: flex;
     justify-content: center;
@@ -106,6 +106,15 @@
   /* Card Section*/
   /*Customer review cards*/
 
+.cards-section {
+  background-color: gainsboro;
+}
+
+.cards-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
 .cards-h1 {
   text-align: center;
   font-size: 30px;
@@ -116,15 +125,14 @@
 .main-cards {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  background-color: black;
-  gap: 100px;
+  gap: 30px;
   justify-content: center;
   text-align: center;
   align-items: stretch;
-  padding-top: 20px;
+  /* padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 50px;
-  padding-left: 50px;
+  padding-left: 50px; */
 }
 
 .top-feedback {
@@ -137,21 +145,17 @@
 }
 
 .top-feedback {
-  background-color:#32373B;
+  background-color: var(--gray);
   padding-bottom: 14px;
 }
 
 
 .top-image {
   height: 150px;
-  width: auto;
+  width: 150px;
+  border-radius: 50%;
   align-items: center;
   justify-content: center;
-  border-radius: 3px;
-}
-
-.top-image.one {
-  width: 150px;
 }
 
 .main-feedback {
@@ -169,7 +173,17 @@
   
   /* Tablet Media Query */
   @media (max-width: 768px) {
-    
+    .main-cards {
+      grid-template-columns: auto;
+    }
+
+    .top-feedback {
+      max-width: 400px;
+    }
+
+    .bottom-feedback {
+      padding: 0 25px 0 25px;
+    }
   }
   
   /* Mobile Media Query */
@@ -184,6 +198,7 @@
         border: 1px solid #ddd;
         padding: 1rem;
         width: 200px;
+        z-index: 999;
       }
     
       .nav-links.show {
