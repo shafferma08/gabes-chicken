@@ -48,6 +48,7 @@
     font-family: 'Ranchers', sans-serif;
     color: #2E282A;
     transition: color 0.3s ease;
+    font-size: 1.4rem;
   }
 
   .nav-links a:hover {
