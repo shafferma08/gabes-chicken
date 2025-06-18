@@ -4,6 +4,7 @@
   --gold: #FFC857;
   --gray: #4A5859;
   --black: #2E282A;
+  --light-beige: #F4F1DE;
 }
 
 * {
@@ -23,7 +24,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: #f8f8f8;
     border-bottom: 1px solid #ccc;
     background-color: #F4F1DE;
   }
@@ -107,19 +107,22 @@
   /*Customer review cards*/
 
 .cards-section {
-  background-color: gainsboro;
+  background-color: var(--light-beige);
 }
 
 .cards-container {
   max-width: 1000px;
   margin: auto;
+  padding: 4rem 0 4rem 0;
 }
 
 .cards-h1 {
   text-align: center;
-  font-size: 30px;
+  font-size: 3rem;
   padding-bottom: 50px;
-  color:#F4B860
+  color:var(--brown);
+  font-family: 'Ranchers', san-serif;
+  text-transform: uppercase;
 }
 
 .main-cards {
@@ -141,11 +144,11 @@
   align-items: center;
   justify-content: center;
   padding-top: 15px;
-  border-radius: 5px;
+  border-radius: 40px;
 }
 
 .top-feedback {
-  background-color: var(--gray);
+  background-color: #fff;
   padding-bottom: 14px;
 }
 
@@ -154,22 +157,163 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
+  border: #C83E4D solid 3px;
   align-items: center;
   justify-content: center;
+}
+
+.bottom-feedback {
+  padding: 0 2rem 0 2rem;
 }
 
 .main-feedback {
   line-height: 36px;
   padding-top: 8px;
-  color:#F4B860;
+  color:var(--red);
 }
 
 .paragraph-text {
   line-height: 28px;
-  color:#F4D6CC
+  color:var(--black);
 }
+
+/* Deals heading */
+.deals-heading {
+  text-align: center;
+  margin: 3rem auto 1rem;
+  padding: 0 1rem;
+}
+
+.deals-heading h2 {
+  font-size: 3rem;
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.deals-heading h3 {
+  font-size: 1.5rem;
+  font-family: 'Ranchers', sans-serif;
+  color: var(--brown);
+  margin-top: 0;
+}
+
   
-  
+/* Slideshow */
+
+/* Generic page container */
+.container {
+  max-width: 980px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* === Slider Section === */
+.photo-slider {
+  margin: 3rem 0;
+}
+
+.photo-slider .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* Wrapper that hides overflow */
+.slider-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Flex container of all slides */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual slides */
+.slide {
+  flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Arrows */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.slider-btn:hover {
+  background: var(--brown);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #fefbe8; /* warm light beige */
+  color: #2e282a;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-top: 5px solid var(--gold);
+  font-size: 0.95rem;
+}
+
+.disclaimer {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  color: #444;
+  font-size: 0.85rem;
+}
+
+.footer-contact {
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-contact a {
+  color: var(--red);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer-contact a:hover {
+  color: var(--brown);
+}
+
+
+/* Small-screen tweak */
+@media (max-width: 480px) {
+  .slider-btn {
+    padding: 0.4rem 0.7rem;
+  }
+}
+
   
   /* Tablet Media Query */
   @media (max-width: 768px) {
